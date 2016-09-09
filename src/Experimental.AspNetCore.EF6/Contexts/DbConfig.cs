@@ -7,6 +7,7 @@ namespace Experimental.AspNetCore.EF6.Contexts
     {
         public DbConfig()
         {
+            SetProviderFactory("System.Data.SqlClient", System.Data.SqlClient.SqlClientFactory.Instance);
             SetProviderServices("System.Data.SqlClient", SqlProviderServices.Instance);
         }
     }
